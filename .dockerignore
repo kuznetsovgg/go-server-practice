@@ -1,1 +1,4 @@
-buildrun.sh
+*.sh
+*.yaml
+*.yml
+README.md
