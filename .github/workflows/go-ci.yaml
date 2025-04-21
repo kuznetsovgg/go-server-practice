@@ -39,7 +39,7 @@ jobs:
   
   publish-image:
     needs: lint-code
-    if: github.ref == "refs/heads/main"
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
