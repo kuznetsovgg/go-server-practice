@@ -1,11 +1,7 @@
-*.sh
-*.md
-*.yaml
-*.yml
-docker-compose*
-.gitignore
-.dockerignore
+*
 
-grafana/
-.git/
-.github/
+# Исключения
+!cmd/
+!internal/
+!go.*
+!Dockerfile

@@ -1,0 +1,17 @@
+# Базовые правила для Go
+bin/
+dist/
+*.exe
+*.test
+*.out
+vendor/
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Логи и временные файлы
+*.log
+*.tmp
