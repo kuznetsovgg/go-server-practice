@@ -10,7 +10,7 @@ env:
   GO_VERSION: '1.24'
 
 jobs:
-  go-mod:
+  go-mod-tidy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,7 +23,8 @@ jobs:
           git diff --exit-code go.mod
           git diff --exit-code go.sum
 
-  lint:
+  lint-code:
+    needs: go-mod-tidy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -37,6 +38,8 @@ jobs:
           version: latest
   
   publish-image:
+    needs: lint-code
+    if: github.ref == "refs/heads/main"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
