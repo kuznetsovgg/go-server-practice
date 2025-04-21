@@ -1,4 +1,11 @@
 *.sh
+*.md
 *.yaml
 *.yml
-README.md
+docker-compose*
+.gitignore
+.dockerignore
+
+grafana/
+.git/
+.github/
