@@ -9,9 +9,12 @@
 
 Сделал docker-compose, поднял Promtail+Loki для логов и Prometheus (promhttp https://pkg.go.dev/github.com/prometheus/client_golang/prometheus/promhttp), смотрю в Grafan'е. 
 
-Сделал очень простой, не слишком информативный дашборд:
+Сделал очень простой дашборд, настрои под логи и пару метрик (приложения):
 
 ![image](https://github.com/user-attachments/assets/3d93d467-84d2-4119-89f3-1b3c26365757)
 
-## Планы
-CI ?
+Также написал CI-workflow, состоящий из 3 шагов: проверки go.mod (практика работы с зависимостями приложения), линтинга кода, а также сборки и пуша образа в docker hub.
+
+![image](https://github.com/user-attachments/assets/d381ba86-f1ab-4d4e-ae88-a65a780473ff)
+
+![image](https://github.com/user-attachments/assets/9ab5c3f6-1802-44b4-a295-929a76c15dcd)
